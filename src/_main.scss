@@ -1,0 +1,111 @@
+// ############ _my-bulma.scss
+
+$RebeccaPurple: #663399;
+$navy: #000080;
+$oldLace: #FDF5E6;
+$AliceBlue: #F0F8FF;
+$DropboxDash: #FAF9F7;
+$Alabaster: #F1F0E8;
+
+// ############ Path to Bulma's sass folder
+
+@use "bulma/sass" with (
+$family-primary: '"Montserrat", sans-serif',
+$primary: $RebeccaPurple,
+$link: $navy,
+$control-border-width: 0px,
+$input-shadow: none,
+$footer-padding: 1rem,
+$body-background-color: $Alabaster,
+$navbar-background-color: $AliceBlue,
+//$navbar-background-color: transparent,
+$navbar-box-shadow-size: 0, // optional: remove shadow
+);
+
+// ############ Google Font
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+// ############
+* {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  /* Dark Mode */
+  body.dark {
+    background-color: #302E2B;
+    color: #e0e0e0;
+  }
+  
+  body.dark .navbar {
+    background-color: #ff36eee7;
+    color: #fff;
+  }
+  
+  body.dark code {
+    background-color: #333;
+    color: #eee;
+  }
+  
+  /* Chess Board */
+  #board {
+    /* width: min(95vmin, 100%); */
+    aspect-ratio: 1 / 1;
+    margin-inline: auto;
+    display: block;
+    min-width: 400px;
+    min-height: 400px;
+    max-width: 720px;
+    max-height: 720px;
+    width: 640px;
+    height: 640px;
+  }
+  
+  /* FEN Box */
+  .fen-box {
+    display: inline-block;
+    background: #f8f8f8;
+    color: #a00;
+    padding: 0.1rem 0.2rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    word-break: break-word;
+    max-width: 95vw;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  /*  */
+  
+  
+  
+  
+  .navbar-brand {
+    align-items: center;
+    height: 3.25rem;
+    /* default navbar height in Bulma */
+  }
+  
+  .navbar-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  /*  */
